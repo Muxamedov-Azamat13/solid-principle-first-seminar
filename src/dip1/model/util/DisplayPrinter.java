@@ -4,13 +4,12 @@ import dip1.model.ReportItem;
 import dip1.model.ReportManager;
 
 import java.util.Collection;
-import java.util.List;
 
-public class ReportPrinter implements ReportManager {
+public class DisplayPrinter implements ReportManager {
     public void output(Collection<ReportItem> items) {
-        System.out.println("Output to printer");
+        System.err.println("Output to display");
         for (ReportItem item : items) {
-            System.out.format("printer %s - %f \n\r", item.getDescription(), item.getAmount());
+            System.out.format("display %s - %f \n\r", item.getDescription(), item.getAmount());
         }
     }
 }

@@ -2,11 +2,16 @@ package srp1;
 
 import srp1.figure.Point;
 import srp1.figure.Square;
+import srp1.figure.SquareDrawer;
+
+import java.sql.SQLRecoverableException;
 
 public class Main {
     public static void main(String[] args) {
+        SquareDrawer squareDrawer = new SquareDrawer();
+
         Square square = new Square(new Point(1,1), 5);
         System.out.printf("Square area: %d \n", square.getArea());
-        square.draw();
+        squareDrawer.draw(square);
     }
 }
