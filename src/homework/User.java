@@ -1,6 +1,6 @@
 package homework;
 
-public class User implements User_, Persister_, Report{
+public class User implements SaveAble{
     private final String name;
 
     public User(String name){
